@@ -46,7 +46,7 @@ impl Prefixes {
         self.prefixes.get(prefix)
     }
 
-    pub(crate) fn insert<S: Into<Namespace>>(&mut self, prefix: Prefix, namespace: S) {
+    pub fn insert<S: Into<Namespace>>(&mut self, prefix: Prefix, namespace: S) {
         self.prefixes.insert(prefix, namespace.into());
     }
 }
